@@ -1,0 +1,25 @@
+{
+  "name": "be-db-basics-showme-mariagluck",
+  "version": "1.0.0",
+  "description": "You are planning to build an app where users can add poems anonymously. You want to have _some_ data regarding the poem, but nothing that can be used to identify the user. Before even starting, try to think about the data you will be handling. You (as an administrator) are allowed to edit the poems.",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FbW-E01/be-db-basics-showme-mariagluck.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FbW-E01/be-db-basics-showme-mariagluck/issues"
+  },
+  "homepage": "https://github.com/FbW-E01/be-db-basics-showme-mariagluck#readme"
+}
