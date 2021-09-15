@@ -12,10 +12,10 @@ You could take some inspiration from here; https://www.poetryfoundation.org/poem
 
 
 # Data structure for Poem app
-    - pseudoname     -TEXT(100) 
-    - title          -TEXT(1000)
+    - pseudoname     -varchar(100) 
+    - title          -varchar(1000)
     - poem           -TEXT(5000)
-    - email          -TEXT(255)
+    - email          -varchar(255)
     - createdby      -TEXT(100)
     - location       -TEXT(100)
     - date           -DATETIME

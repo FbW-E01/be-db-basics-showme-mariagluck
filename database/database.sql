@@ -5,8 +5,8 @@ SHOWDATABASES;
 USE addPoems;
 
 CREATE TABLE PoemUsers(
-    pseudoname TEXT(100),
-    title TEXT(1000) not null,
+    pseudoname varchar(100),
+    title varchar(1000) not null,
     email TEXT(255) not null, 
     createdby TEXT(255) not null,
     location TEXT(100),
@@ -15,10 +15,6 @@ CREATE TABLE PoemUsers(
     rating INT(255) not null,
     published BOOLEAN NOT NULL
 );
-
--- THis doesnt work
--- INSERT INTO PoemUsers
--- VALUES('poem', varchar(255), not, null);
 
 
 -- Here I write modifications to the table data:
@@ -34,9 +30,9 @@ ALTER TABLE PoemUsers
 
 ALTER TABLE PoemUsers
    MODIFY poem TEXT(255) NOT NULL;
-  
+
    
--- TESTING INSET INTO
+-- TESTING INSERT INTO
 INSERT INTO PoemUsers(type) VALUES('date', CURRENT_DATE());
 
 
@@ -44,7 +40,13 @@ INSERT INTO PoemUsers(type) VALUES('date', CURRENT_DATE());
 -- ALTER TABLE PoemUsers
 --   MODIFY date CURRENT_DATE() NOT NULL;
 
+-- THis doesnt work
+INSERT INTO PoemUsers(title, published)
+   VALUES('potato Poem', 1);
 
+
+SELECT pseudoname
+       title FROM PoemUsers;
 
 DESCRIBE PoemUsers;
 
@@ -54,7 +56,7 @@ DESCRIBE PoemUsers;
 
 -- here I create a new table with a different logic to test
 CREATE TABLE Poems (
-title TEXT(20) NOT NULL,
+title varchar(20) NOT NULL,
 poem TEXT(10000) NOT NULL,
 date DATE,
 time TIME
