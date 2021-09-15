@@ -24,7 +24,7 @@ CREATE TABLE PoemUsers(
 -- Here I write modifications to the table data:
 
 ALTER TABLE PoemUsers
-  ADD poem TEXT(5000) NOT NULL,
+  ADD poem TEXT(5000) NOT NULL
     AFTER title;
 
 ALTER TABLE PoemUsers
