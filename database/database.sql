@@ -5,14 +5,15 @@ SHOWDATABASES;
 USE addPoems;
 
 CREATE TABLE PoemUsers(
-    name varchar(255) not null,
-    title varchar(255) not null,
-    email varchar(255) not null, 
-    createdby varchar(255) not null,
-    location varchar(255) not null,
-    date varchar(255) not null,
-    wordcount varchar(255) not null,
-    rating varchar(255) not null
+    pseudoname TEXT(100),
+    title TEXT(1000) not null,
+    email TEXT(255) not null, 
+    createdby TEXT(255) not null,
+    location TEXT(100),
+    date DATETIME,
+    wordcount INT(255) not null,
+    rating INT(255) not null,
+    published BOOLEAN NOT NULL
 );
 
 -- THis doesnt work
@@ -23,24 +24,19 @@ CREATE TABLE PoemUsers(
 -- Here I write modifications to the table data:
 
 ALTER TABLE PoemUsers
-  ADD poem varchar(255)
+  ADD poem TEXT(5000) NOT NULL,
     AFTER title;
 
 ALTER TABLE PoemUsers
-  ADD charactercount varchar(255) not null
+  ADD charactercount INT(255) not null
     AFTER wordcount;    
 
 
 ALTER TABLE PoemUsers
-   MODIFY poem varchar(255) NOT NULL;
-
-ALTER TABLE PoemUsers
-  MODIFY name varchar(45) NOT NULL;   
-
-
-ALTER TABLE PoemUsers
-  MODIFY poem varchar(5000) NOT NULL;
+   MODIFY poem TEXT(255) NOT NULL;
+  
    
+-- TESTING INSET INTO
 INSERT INTO PoemUsers(type) VALUES('date', CURRENT_DATE());
 
 
@@ -48,9 +44,18 @@ INSERT INTO PoemUsers(type) VALUES('date', CURRENT_DATE());
 -- ALTER TABLE PoemUsers
 --   MODIFY date CURRENT_DATE() NOT NULL;
 
+
+
+DESCRIBE PoemUsers;
+
+
+
+
+
 -- here I create a new table with a different logic to test
 CREATE TABLE Poems (
-name VARCHAR(20) NOT NULL,
+title TEXT(20) NOT NULL,
+poem TEXT(10000) NOT NULL,
 date DATE,
 time TIME
 );  
@@ -59,4 +64,5 @@ time TIME
 DROP TABLE Poems;
 
 
-DESCRIBE PoemUsers;
+
+

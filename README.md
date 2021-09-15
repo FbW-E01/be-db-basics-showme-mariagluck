@@ -9,3 +9,18 @@ You could take some inspiration from here; https://www.poetryfoundation.org/poem
 - Estimate how much data will you allow to be saved 
 - Describe the data in whatever way you find best
 - Show how you would create the table(s) for your data
+
+
+# Data structure for Poem app
+    - pseudoname     -TEXT(100) 
+    - title          -TEXT(1000)
+    - poem           -TEXT(5000)
+    - email          -TEXT(255)
+    - createdby      -TEXT(100)
+    - location       -TEXT(100)
+    - date           -DATETIME
+    - wordcount      -INT
+    - rating         -INT
+    - published      -BOOLEAN
+
+
